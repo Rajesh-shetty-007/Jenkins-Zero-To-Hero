@@ -12,7 +12,7 @@ pipeline {
       steps {
         sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/Rajesh-shetty-007/Jenkins-Zero-To-Hero.git'
-        java -version
+        
 
       }
     }
