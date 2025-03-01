@@ -12,6 +12,16 @@ pipeline {
         //git branch: 'main', url: 'https://github.com/Rajesh-shetty-007/Jenkins-Zero-To-Hero.git'
       }
     }
+    stage('Install Java 17') {
+      steps {
+        sh '''
+            apt-get update && apt-get install -y openjdk-17-jdk
+            update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+            java -version
+        '''
+     }
+    }
+
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
